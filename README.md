@@ -1,6 +1,27 @@
 # Introduction
 
+The purpose of this project is to create a TypeScript project with support for Jest and ESLint. 
+
+See the `scripts` section of the `package.json` file to see what `npm run` commands are available.. For example, you can run:
+
+```shell
+npm run build # builds the project, and places the index.js file in `dist/index.js`.
+npm start     # executes the aforementioned `index.js` file.
+npm run test  # runs all tests in the `tests/` folder
+```
+
 # Installation/Setup
+
+- Clone this repo, and `cd` into the created directory. This will be your project directory.
+- Make the `setup.sh` file executable:
+```shell
+chmod a+x ./setup.sh
+```
+- Run the `setup.file`:
+```shell
+./setup.sh
+```
+
 
 # References
 - [.gitignore file](https://github.com/github/gitignore/blob/main/Node.gitignore)
