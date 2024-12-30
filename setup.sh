@@ -14,7 +14,7 @@ for file in use_this-*
 	cp $file $NEW_NAME
 done
 
-echo "Updating package.json 'script` entries..."
+echo "Updating package.json 'script' entries..."
 jq '.scripts."lint-fix"="eslint --fix ."' package.json | \
 	jq '.scripts.start="node dist/index.js"' | \
 	jq '.scripts.build="tsc --build"' | \
