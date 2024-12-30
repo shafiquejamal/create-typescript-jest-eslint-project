@@ -21,6 +21,14 @@ chmod a+x ./setup.sh
 ```shell
 ./setup.sh
 ```
+- After, remove the `use_this-*` files, and reset the git repository:
+```shell
+rm use_this-*
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit after cloning the respository from https://github.com/shafiquejamal/create-typescript-jest-eslint-project"
+```
 
 
 # References

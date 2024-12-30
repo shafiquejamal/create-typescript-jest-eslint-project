@@ -24,7 +24,7 @@ jq '.scripts."lint-fix"="eslint --fix ."' package.json | \
 	jq '.scripts.test="jest --silent --coverage"' | \
 	jq '.scripts."test:watch"="jest --watch"' > package.json-temp
 mv package.json package.json-original && mv package.json-temp package.json
-echo "Done. Please delete all of the use_this* files:\n rm use_this-*"
+echo "Done. Please delete all of the use_this* files, and reset the git repository:\n\n  rm use_this-*\n\n  rm -rf .git\n\n  git init"
 
 
 
