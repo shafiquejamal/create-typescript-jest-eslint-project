@@ -1,0 +1,22 @@
+---
+name: Run test with jest
+description: Run npm run test
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - src/**/*.ts
+      - tests/**/*.ts
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+
+      - name: Install npm dependencies
+        run: npm ci --include=dev
+
+      - name: Run npm run test
+        run: npm run test
