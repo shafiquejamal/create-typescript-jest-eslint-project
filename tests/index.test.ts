@@ -1,7 +1,7 @@
-import { CONSTANT } from "../src";
+import { CONSTANT } from '../src';
 
 describe('sample test', () => {
-        it('should pass', () => {
-                expect(CONSTANT).toEqual(4);
-        })
+	it('should pass', () => {
+		expect(CONSTANT).toEqual(4);
+	});
 });
