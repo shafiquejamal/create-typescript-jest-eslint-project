@@ -7,6 +7,7 @@ on:  # yamllint disable-line rule:truthy
     paths:
       - src/**/*.ts
       - tests/**/*.ts
+  workflow_dispatch:
 
 jobs:
   test:
@@ -16,7 +17,24 @@ jobs:
       - uses: actions/setup-node@v4
 
       - name: Install npm dependencies
-        run: npm ci --include=dev
+        run: |
+          npm install --save-dev eslint \
+              @eslint/js \
+              @types/eslint__js \
+              @types/node \
+              @types/jest \
+              @typescript-eslint/eslint-plugin \
+              @typescript-eslint/parser \
+              eslint-config-prettier \
+              eslint-plugin-jest \
+              eslint-plugin-prettier \
+              globals \
+              jest \
+              prettier \
+              ts-jest \
+              ts-node \
+              typescript \
+              typescript-eslint
 
       - name: Run npm run test
         run: npm run test
