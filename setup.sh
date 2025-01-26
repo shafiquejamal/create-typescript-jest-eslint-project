@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# shellcheck disable=2181
+
 # Remove existing node_modules
 [ -d node_modules ] && echo "Removing node_modules..." && rm -rdf node_modules
 
@@ -24,3 +26,8 @@ npm install --save-dev eslint \
     typescript-eslint
 
 rm setup.sh
+[ -d .git ] && rm -rdf .git
+
+# Initialized new project
+git init && git add .
+[ $? -eq 0 ] && git commit -m "Initial Commit"
