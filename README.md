@@ -13,23 +13,10 @@ npm run test  # runs all tests in the `tests/` folder
 # Installation/Setup
 
 - Clone this repo, and `cd` into the created directory. This will be your project directory.
-- Make the `setup.sh` file executable:
-```shell
-chmod a+x ./setup.sh
-```
 - Run the `setup.file`:
 ```shell
 ./setup.sh
 ```
-- After, remove the `use_this-*` files, and reset the git repository:
-```shell
-rm use_this-*
-rm -rf .git
-git init
-git add .
-git commit -m "Initial commit after cloning the respository from https://github.com/shafiquejamal/create-typescript-jest-eslint-project"
-```
-
 
 # References
 - [.gitignore file](https://github.com/github/gitignore/blob/main/Node.gitignore)
