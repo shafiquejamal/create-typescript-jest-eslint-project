@@ -38,3 +38,8 @@ jobs:
 
       - name: Run npm run test
         run: npm run test
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage.json
+          path: coverage/coverage-final.json
